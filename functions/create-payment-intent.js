@@ -1,33 +1,48 @@
-// domain/.netlify/functions/create-payment-intent
-require('dotenv').config()
+require("dotenv").config();
 
-const stripe = require('stripe')(process.env.VITE_STRIPE)
+const stripe = require("stripe")(process.env.VITE_STRIPE_SECRET_KEY)
 
-export async function handler (event, context) {
+exports.handler = async function (event, context) {
   if (event.body) {
-    const { cart, shipping_fee, total_amount } = JSON.parse(event.body)
+    const { cart, shipping_fee, total_amount } = JSON.parse(event.body);
+    // console.log(cart)
 
-    const calculateOrderAmount = () => {
-      return shipping_fee + total_amount
-    }
+    calculateOrderAmount = () => {
+      return shipping_fee + total_amount;
+    };
     try {
       const paymentIntent = await stripe.paymentIntents.create({
+        description: "Software development services",
+        shipping: {
+          name: "Jenny Rosen",
+          address: {
+            line1: "510 Townsend St",
+            postal_code: "98140",
+            city: "San Francisco",
+            state: "CA",
+            country: "US",
+          },
+        },
         amount: calculateOrderAmount(),
-        currency: 'usd',
-      })
+
+        currency: "usd",
+        payment_method_types: ["card"],
+      });
+
       return {
         statusCode: 200,
         body: JSON.stringify({ clientSecret: paymentIntent.client_secret }),
-      }
-    } catch (error) {
+      };
+    } catch (err) {
       return {
         statusCode: 500,
-        body: JSON.stringify({ msg: error.message }),
-      }
+        body: JSON.stringify({ error: err.message }),
+      };
     }
   }
+
   return {
     statusCode: 200,
-    body: 'Create Payment Intent',
-  }
-}
+    body: "create payment intent",
+  };
+};

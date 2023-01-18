@@ -17,6 +17,7 @@
     "react-dom": "^18.0.0",
     "react-icons": "^4.7.1",
     "react-router-dom": "^6.6.2",
+    "stripe": "^11.6.0",
     "styled-components": "^5.3.6"
   },
   "devDependencies": {

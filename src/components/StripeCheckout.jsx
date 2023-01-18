@@ -12,7 +12,7 @@ import { useCartContext } from "../context/cart_context";
 import { useUserContext } from "../context/user_context";
 import { formatPrice } from "../utils/helpers";
 import { useNavigate } from "react-router-dom";
-const key = import.meta.env.VITE_STRIPE;
+const key = import.meta.env.VITE_STRIPE_PUBLIC_KEY;
 const promise = loadStripe(key);
 
 const CheckoutForm = () => {
@@ -52,7 +52,7 @@ const CheckoutForm = () => {
         "/.netlify/functions/create-payment-intent",
         JSON.stringify({ cart, shipping_fee, total_amount })
       );
-
+        // console.log(data.clientSecret);
       setClientSecret(data.clientSecret);
     } catch (error) {
       // console.log(error.response)
