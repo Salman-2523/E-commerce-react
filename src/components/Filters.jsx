@@ -75,7 +75,7 @@ const Filters = () => {
               {companies.map((c, index) => {
                 return (
                   <option key={index} value={c}>
-                    {c}
+                    {c.charAt(0).toUpperCase() + c.slice(1)}
                   </option>
                 )
               })}
