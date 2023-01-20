@@ -13,8 +13,8 @@ const Hero = () => {
           comfort zone
         </h1>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti iure
-          quasi odit tenetur unde officiis repudiandae quod deserunt quia eum?
+        Transform your home with stylish and affordable furniture.
+        Unbeatable selection, unbeatable prices - Find your perfect piece today!
         </p>
         <Link to='/products' className='btn hero-btn'>
           shop now

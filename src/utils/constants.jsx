@@ -24,21 +24,21 @@ export const services = [
     icon: <GiCompass />,
     title: 'mission',
     text:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates, ea. Perferendis corrupti reiciendis nesciunt rerum velit autem unde numquam nisi',
+      'Elevate your living space with our mission to provide premium quality furniture at accessible prices.Our commitment is to creating beautiful and functional furniture for every home and budget.',
   },
   {
     id: 2,
     icon: <GiDiamondHard />,
     title: 'vision',
     text:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates, ea. Perferendis corrupti reiciendis nesciunt rerum velit autem unde numquam nisi',
+      'Our vision is to be the leading furniture provider, offering an unparalleled selection of high-quality and stylish products to customers around the world.',
   },
   {
     id: 3,
     icon: <GiStabbedNote />,
     title: 'history',
     text:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates, ea. Perferendis corrupti reiciendis nesciunt rerum velit autem unde numquam nisi',
+      'Our founders have always been passionate about furniture design, and it reflected in the selection we offer today and this will continue for forever. ',
   },
 ]
 
