@@ -14,7 +14,27 @@
 ## Features of the website
 
 ### Landing Page
+<img src = "./screenshots/hero.png"/>
 
+### Authentication
+<img src = "./screenshots/authentication.png"/>
 
+### Featured Products
+<img src = "./screenshots/featured_products.png"/>
 
+### About Page
+<img src = "./screenshots/about.png"/>
 
+### Products Page
+<img src = "./screenshots/products.png"/>
+
+### Product Description Page
+<img src = "./screenshots/single_product.png"/>
+
+### Cart Page
+<img src = "./screenshots/cart.png"/>
+
+### Checkout Page
+<img src = "./screenshots/checkout.png"/>
+
+## Made By <a href = "https://github.com/salman-2523">Salman</a>
